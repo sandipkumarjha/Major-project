@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Plain Light";
+  src: url(./fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+  font-family: "Plain Light";
+  src: url(./fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+  font-family: "silk serif";
+  src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+  font-family: "silk serif";
+  src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +30,15 @@
     height: 100%;
     width: 100%;
   }
-  
+  #crsr{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 9999;
+    transform: translate(-50%, -50%); 
+  }
   #loader {
     position: fixed;
     height: 100%;
@@ -62,31 +90,39 @@
     animation: anime 2s ease-in-out infinite; /* FIXED */
   }
   
-  @keyframes anime {
+  @keyframes loaderAnime {
     0% {
-      -webkit-text-stroke: 1px #fff;
-      color: #fff;
-      opacity: 1;
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
     }
-  
-    47% {
-      -webkit-text-stroke: 1px #fff;
-      color: #fff;
-      opacity: 1;
+
+    48% {
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
     }
-  
+
     50% {
-      -webkit-text-stroke: 1px #fff;
-      color: transparent;
-      opacity: 0;
+        font-family: 'silk serif';
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 1;
     }
-  
+
     100% {
-      -webkit-text-stroke: 1px #fff;
-      color: #fff;
-      opacity: 1;
+        font-family: 'silk serif';
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 0;
     }
-  }
+}
   
   #main {
     position: relative;
@@ -98,3 +134,53 @@
     width: 100%;
     background-color: #151515;
   }
+  #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 5.5vw;
+  }
+  #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3vw;
+}
+
+#nav-part2 h4 {
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+.hero {
+    /* background-color: red; */
+    width: 72%;
+    margin-left: 27%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    /* background-color: red; */
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+
+
+.hero:nth-child(2) {
+    margin-top: 18vh;
+}
+
+.hero h1 {
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    position: relative;
+}
+
+  

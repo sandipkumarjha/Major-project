@@ -50,5 +50,17 @@ tl.to("#loader",{
 display:"none",
 })
 }
-loadingAnimation()
+loadingAnimation();
 
+function cursorAnimation(){
+    document.addEventListener("mousemove",(e)=>{
+        gsap.to("#crsr",{
+        left:e.x,
+        top:e.y
+    })
+    })
+    Shery.makeMagnet("#nav-part2 h4",{
+    
+      });
+}
+cursorAnimation();
