@@ -284,7 +284,14 @@
   margin-bottom: 5vh;
 }
 #page4-content p{
-  font-size: 1.2vw;
-  font-weight: 100;
-  line-height: 1.8vw;
+  font-size: 2.05vw;
+  width: 50%;
+  margin-bottom: 3vw;
+}
+#page4-flex{
+  display: flex;
+}
+#page4-flex p{
+  font-size: 0.9vw;
+  width: 19%;
 }
