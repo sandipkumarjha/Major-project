@@ -402,8 +402,61 @@ html, body {
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.55;
 }
+/*  Page 5 starting*/
 #page5{
   min-height: 100vh;
   width: 100%;
   background-color: #191616;
+  position: relative;
+}
+.elem{
+  white-space: nowrap;
+  overflow-x: hidden; 
+  margin-bottom: -1vw;
+}
+.elem h1{
+  font-size: 7vw;
+  -webkit-text-stroke: 1px  #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation: anime 10s linear infinite;
+}
+
+@keyframes anime {
+  from {
+     transform: translateX(0);
+  }
+  to {
+      transform: translateX(calc(-100% - 20px)); /* moves the text left by its full width plus the margin */
+  }
+  
+}
+.elem2{
+  white-space: nowrap;
+  overflow-x: hidden; 
+  margin-bottom: -2vw;
+}
+.elem2 h1{
+  font-size: 7vw;
+  -webkit-text-stroke: 1px  #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  transform: calc(-100% - 20px); /* start fully to the left */
+  animation: anime 10s linear infinite reverse;
+}
+.elem span{
+  font-style: italic;
+  font-family: 'silk serif';
+  color: transparent;
+}
+.elem2 span{
+  font-style: italic;
+  font-family: 'silk serif';
+  color: transparent;
 }
